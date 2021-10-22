@@ -5,7 +5,7 @@ dependencies:
   - python=3.7
   - pip
   - pip:
-    - scikit-learn==
+    - scikit-learn
     - mlflow>=1.0
     - boto3
     - pandas
