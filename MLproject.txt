@@ -1,0 +1,8 @@
+name: tutorial
+conda_env: conda.yaml
+entry_points:
+  main:
+    parameters:
+      alpha: {type: float, default: 0.25}
+      l1_ratio: {type: float, default: 0.22}
+    command: "python train.py {alpha} {l1_ratio}"
