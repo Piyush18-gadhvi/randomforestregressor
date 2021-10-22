@@ -13,5 +13,5 @@ y = pd.read_csv("y_train.csv")
 from sklearn.ensemble import RandomForestRegressor
 with mlflow.start_run():
         regressor = RandomForestRegressor(n_estimators = 10, random_state = 0)
-        regressor.fit(X(-1,1), y.reshape(-1,1))
+        regressor.fit(X, y)
         mlflow.sklearn.log_model(regressor, "model")
