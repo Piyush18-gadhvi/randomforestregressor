@@ -16,6 +16,6 @@ from sklearn.ensemble import RandomForestRegressor
 with mlflow.start_run():
         regressor = RandomForestRegressor(n_estimators = n_estimators_, random_state = random_state_)
         regressor.fit(X, y)
-        mlflow.log_param("alpha", alpha)
-        mlflow.log_param("l1_ratio", l1_ratio)
+        mlflow.log_param("n_estimators_", n_estimators_)
+        mlflow.log_param("random_state_", random_state_)
         mlflow.sklearn.log_model(regressor, "model")
