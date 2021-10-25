@@ -11,8 +11,8 @@ y = pd.read_csv("y_train.csv")
 #X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.3)
 
 # Fitting Random Forest Regression to the dataset
-n_estimators_ = float(sys.argv[1]) if len(sys.argv) > 1 else 10.0
-random_state_ = float(sys.argv[2]) if len(sys.argv) > 2 else 0.0
+n_estimators_ = int(sys.argv[1]) if len(sys.argv) > 1 else 10
+random_state_ = int(sys.argv[2]) if len(sys.argv) > 2 else 0
 from sklearn.ensemble import RandomForestRegressor
 with mlflow.start_run():
         regressor = RandomForestRegressor(n_estimators = n_estimators_, random_state = random_state_)
