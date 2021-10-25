@@ -3,6 +3,6 @@ conda_env: conda.yaml
 entry_points:
   main:
     parameters:
-      n_estimator_: {type: float, default: 10}
-      randome_state_: {type: float, default: 0}
+      n_estimator_: {type: float, default: 10.0}
+      randome_state_: {type: float, default: 0.0}
     command: "python train.py {n_estimator_} {randome_state_}"
