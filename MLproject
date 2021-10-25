@@ -5,4 +5,4 @@ entry_points:
     parameters:
       n_estimator_: {type: float, default: 10}
       randome_state_: {type: float, default: 0}
-    command: "python train.py {alpha} {l1_ratio}"
+    command: "python train.py {n_estimator_} {randome_state_}"
